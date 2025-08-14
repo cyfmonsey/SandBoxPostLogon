@@ -1,4 +1,3 @@
-# SandBoxPostLogon-Install.ps1
 # Requires admin for winget/Store/VC++ installs
 # Logs to C:\Windows\Temp\PostLogon-Install.log
 
@@ -11,8 +10,8 @@ $ErrorActionPreference = 'Stop'
 $jobs = @(
   @{ Name = 'Install-Winget'; Url = 'https://raw.githubusercontent.com/ThioJoe/Windows-Sandbox-Tools/refs/heads/main/Installer%20Scripts/Install-Winget.ps1' },
   @{ Name = 'Install-Microsoft-Store'; Url = 'https://raw.githubusercontent.com/ThioJoe/Windows-Sandbox-Tools/refs/heads/main/Installer%20Scripts/Install-Microsoft-Store.ps1' },
-  @{ Name = 'Install-Microsoft-Store'; Url = 'https://raw.githubusercontent.com/ThioJoe/Windows-Sandbox-Tools/refs/heads/main/Startup%20Scripts/SandboxStartup.ps1' },
-  @{ Name = 'Install VC Redist'; Url = 'https://raw.githubusercontent.com/ThioJoe/Windows-Sandbox-Tools/refs/heads/main/Installer%20Scripts/Install%20VC%20Redist.ps1' }
+  @{ Name = 'Install VC Redist'; Url = 'https://raw.githubusercontent.com/ThioJoe/Windows-Sandbox-Tools/refs/heads/main/Installer%20Scripts/Install%20VC%20Redist.ps1' },
+  @{ Name = 'Sandbox Startup'; Url = 'https://raw.githubusercontent.com/ThioJoe/Windows-Sandbox-Tools/refs/heads/main/Startup%20Scripts/SandboxStartup.ps1' }
 )
 
 Write-Host "Starting post-logon installs at $(Get-Date -Format s)"
